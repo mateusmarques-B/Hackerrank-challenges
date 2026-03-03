@@ -13,3 +13,5 @@ function birthdayCakeCandles(candles) {
     }
     return aux;
 }
+
+https://www.hackerrank.com/challenges/birthday-cake-candles/
