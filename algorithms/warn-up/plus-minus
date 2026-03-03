@@ -18,3 +18,5 @@ console.log(Math.abs(b/a));
 console.log(Math.abs(c/a));
 console.log(Math.abs(d/a));
 }
+
+https://www.hackerrank.com/challenges/plus-minus/
