@@ -1,0 +1,20 @@
+https://www.hackerrank.com/challenges/plus-minus
+
+function plusMinus(arr) {
+     var a = Array.from(arr).length;
+     var b = 0;
+     var c = 0;
+     var d = 0;
+     
+    for( var i = 0; i < a; i++){
+    if(arr[i] > 0)
+        b++;
+    if(arr[i] < 0)
+        c++;
+    if(arr[i] === 0)
+        d++
+}
+console.log(Math.abs(b/a));
+console.log(Math.abs(c/a));
+console.log(Math.abs(d/a));
+}
