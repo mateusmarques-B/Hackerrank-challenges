@@ -12,3 +12,5 @@ function compareTriplets(a, b) {
     }
     return [alice, bob];
 }
+
+https://www.hackerrank.com/challenges/compare-the-triplets/
