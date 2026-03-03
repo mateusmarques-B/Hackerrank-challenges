@@ -5,3 +5,5 @@ function simpleArraySum(ar) {
   }
   return sum;
 }
+
+https://www.hackerrank.com/challenges/simple-array-sum/
