@@ -1,0 +1,24 @@
+function countResponseTimeRegressions(responseTimes) {
+    if (responseTimes.length <= 1) return 0;
+    
+    let sum = responseTimes[0];
+    let count = 0;
+    
+    for(let i = 1; i < responseTimes.length; i++){
+        let avg = sum / i
+        sum+= responseTimes[i];
+        
+        if (responseTimes[i] > avg) {
+         count++
+        }
+    }
+     return count;
+
+Time = O(n) 
+Space = O(1) 
+
+Neste desafio, definimos uma variável de soma dos elementos do array, "sum", um índice a menos que o índice que percorre o array, o "i".
+Dessa forma, foi possível somar os valores dos elementos do array até i, fazer o cálculo da média aritmética simples e depois incrementar i.
+E o contador só aumenta caso o valor atual do array, "i", seja maior que a média.
+  
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/count-elements-greater-than-previous-average/
