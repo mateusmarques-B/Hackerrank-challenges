@@ -1,0 +1,17 @@
+function isAlphabeticPalindrome(code) {
+    let count = 0;
+    let onlyLetters = code.toLowerCase().replace(/[^a-z]/g, "");
+    let reversed = onlyLetters.split("").reverse().join("");
+
+    if (onlyLetters === reversed){
+        count++
+    }
+    return count;
+
+}
+
+Expressões regulares foram usadas para retirar pontos, vírgulas, espaços e números do array principal, criando um novo array somente com letras, "onlyLetters".
+Que por sua vez, foi seperado por caracteres, invertido, agrupado e armazenado em um outro array, "reversed".
+Caso os dois, "onlyLetters" e "reversed", possuam o mesmo valor, são palíndromos.
+  
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/check-palindrome-filter-non-letters/
