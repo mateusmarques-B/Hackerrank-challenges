@@ -1,0 +1,12 @@
+function isNonTrivialRotation(s1, s2) {  
+    if (s1 === s2 || s1.length != s2.length) return 0;
+    
+    return(s1 + s1).includes(s2) ? 1 : 0;
+}
+
+O primeiro laço de repetição verifica se os vetores são idênticos, e se o tamnho de ambos são diferentes,
+pois são as condições que impossibilitam s2 rotacionar s1.
+Rotacionar é mover os carácteres do ínicio de uma string para o final.
+Se s2 é uma rotação de s1, logo, sempre aparecerá como uma substring de s1 + s1.
+
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/check-non-identical-string-rotation/
