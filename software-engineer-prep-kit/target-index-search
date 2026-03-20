@@ -1,0 +1,21 @@
+function binarySearch(nums, target) {
+    let left = 0;
+    let rigth = nums.length -1;
+    
+    while(left <= rigth){
+        let mid = Math.floor((left + rigth) /2);
+        
+        if(nums[mid] === target){
+            return mid;
+        }else if (nums[mid] < target){
+            left = mid + 1;
+        }else{
+            rigth = mid - 1;
+        }
+    }
+    return -1;
+    
+}
+
+O diferencial deste exercício é a busca binária, onde dividimos o array em lado esquerdo, do início ao meio, e lado direto, do meio ao fim.
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/lookup-with-binary-search
