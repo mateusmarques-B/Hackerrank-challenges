@@ -1,0 +1,24 @@
+function findFirstOccurrence(nums, target) {
+    let left = 0;
+    let right = nums.length - 1;
+    let result = -1;
+    
+    while(left <= right){
+        let mid = Math.floor((left + right) / 2);
+        
+        if(nums[mid] === target){
+            result = mid;
+            right = mid - 1;
+        }else if(nums[mid] < target) {
+            left = mid + 1;
+        }else {
+            right = mid - 1;
+        }
+    }
+    return result;
+
+}
+
+Exercício de busca binária que, após encontrar o valor alvo dentro do array, 
+diminui o tamanho do lado esquerdo do array, do início ao meio, até encontrar a primeira ocorrência do valor alvo.
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/first-occurrence-in-event-code-log
