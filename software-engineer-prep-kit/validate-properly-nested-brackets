@@ -1,0 +1,29 @@
+function areBracketsProperlyMatched(code_snippet) {
+    const stack = [];
+    const map = {
+        ')' : '(',
+        '}' : '{',
+        ']' : '['
+    };
+    
+    for (let char of code_snippet) {
+        if(map[char]) {
+            const topElement = stack.pop();
+            if(topElement !== map[char]) {
+                return 0;
+            // elemento retirado da pilha não é o par do elemento char
+            
+            }
+        }else if (Object.values(map).includes(char)) {
+            stack.push(char);
+          // somente elementos, caracteres, iguais aos que estão no objeto map podem entar na pilha.
+        }
+    }
+    
+    return stack.length === 0 ? 1 : 0;
+
+}
+
+A estrutura de pilha permite comparar o último elemento com o elemento atual, caso sejam um par de abertura e fechamento, são excluidos da pilha.
+
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/validate-properly-nested-brackets/
