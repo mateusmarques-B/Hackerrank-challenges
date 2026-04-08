@@ -1,0 +1,33 @@
+function processCouponStackOperations(operations) {
+    const stack = [];
+    const minStack = [];
+    const results = [];
+    
+    for(const op of operations) {
+        const [cmd, arg] = op.split(' ');
+        
+        if (cmd === 'push'){
+            const val = Number(arg);
+            stack.push(val);
+            if (minStack.length === 0 || val <= minStack.at(-1)) {
+                minStack.push(val);
+            }
+        } else if (cmd === 'pop') {
+            const val = stack.pop();
+            if (val === minStack.at(-1)) {
+                minStack.pop();
+            }
+        } else if (cmd === 'top') {
+            results.push(stack.at(-1));
+        } else if (cmd === 'getMin') {
+            results.push(minStack.at(-1));
+        }
+    }
+    return results;
+}
+
+Neste exercício, usei uma estrutura de pilha. Uma pilha armazena os todos os valores, a outra somente os menores valores.
+A entrada de dados é em string e a saída é um array de inteiros. Por essa razão, o parâmetro é separado em comando e número.
+Ex: 'push 3',  cmd = 'push',  arg = 3 
+
+https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/min-tracking-stack
